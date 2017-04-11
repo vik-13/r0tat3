@@ -150,7 +150,7 @@ class Rotate extends Component {
 
     render() {
         return (
-            <div className="rotate-container" style={{width: this.state.width + 'px'}}>
+            <div className="rotate-container" style={{width: this.state.width}}>
                 <div className={'rotate-main' + (this.state.selected !== -1 ? ' inner' : '')}>
                     {this.state.slides.map((slide) => {
                         return <Slide key={slide.key} data={slide} density={this.state.density}/>;

@@ -45,8 +45,8 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App" style={{width: '500px', backgroundColor: '#aaa'}}>
-                <Rotate slides={this.slides} width="400" density="1" />
+            <div className="App" style={{width: '500px', backgroundColor: '#000'}}>
+                <Rotate slides={this.slides} width="56vh" density="1" />
             </div>
         );
     }
