@@ -6,21 +6,29 @@ class SlideContent extends Component {
         return (
             <div className="item">
                 <div className="price-col">
-                    <div className="price head-1"></div>
-                    <div className="price head-2"></div>
+                    <div className="price head-1">
+                        <span>embossed white plimsoll</span>
+                        <b>29.90$</b>
+                    </div>
+                    <div className="price head-2">
+                        <span>embossed white plimsoll</span>
+                        <b>29.90$</b>
+                    </div>
                     <div className="price body-1">
-                        <span>viscose sweater</span>
+                        <span>embossed white plimsoll</span>
                         <b>29.90$</b>
                     </div>
                     <div className="price body-2">
                         <span>embossed white plimsoll</span>
-                        <b>129.90$</b>
-                    </div>
-                    <div className="price legs-1">
-                        <span>Striped shorts</span>
                         <b>29.90$</b>
                     </div>
-                    <div className="price legs-2">&nbsp;</div>
+                    <div className="price legs-1">
+                        <span>embossed white plimsoll</span>
+                        <b>29.90$</b>
+                    </div>
+                    <div className="price legs-2">
+                        <span>embossed white plimsoll</span>
+                        <b>29.90$</b></div>
                     <div className="price shoes">
                         <span>embossed white plimsoll</span>
                         <b>29.90$</b>
