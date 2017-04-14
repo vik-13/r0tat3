@@ -2,37 +2,30 @@ import React, { Component } from 'react';
 import './Sl1d3-content.css';
 
 class SlideContent extends Component {
+    products = [];
+
+    constructor(props) {
+        super(props);
+
+        console.log(props.data);
+
+        if (props.data.products) {
+            for(let i = 0; i < props.data.products.length; i++) {
+                this.products.push(
+                    <div className="product-item" key={i}>
+                        <div className="title">{props.data.products[i].title}</div>
+                        <div className="price">{props.data.products[i].price}</div>
+                    </div>
+                );
+            }
+        }
+    }
+
     render() {
         return (
             <div className="item">
-                <div className="price-col">
-                    <div className="price head-1">
-                        <span>embossed white plimsoll</span>
-                        <b>29.90$</b>
-                    </div>
-                    <div className="price head-2">
-                        <span>embossed white plimsoll</span>
-                        <b>29.90$</b>
-                    </div>
-                    <div className="price body-1">
-                        <span>embossed white plimsoll</span>
-                        <b>29.90$</b>
-                    </div>
-                    <div className="price body-2">
-                        <span>embossed white plimsoll</span>
-                        <b>29.90$</b>
-                    </div>
-                    <div className="price legs-1">
-                        <span>embossed white plimsoll</span>
-                        <b>29.90$</b>
-                    </div>
-                    <div className="price legs-2">
-                        <span>embossed white plimsoll</span>
-                        <b>29.90$</b></div>
-                    <div className="price shoes">
-                        <span>embossed white plimsoll</span>
-                        <b>29.90$</b>
-                    </div>
+                <div className="child-products">
+                    {this.products}
                 </div>
                 <img className="bg-img" src="images/1_0.png" alt="" />
             </div>

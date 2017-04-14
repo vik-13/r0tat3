@@ -1,3 +1,33 @@
+.child-products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    padding: 10px;
+    height: 100%;
+    width: 34%;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+}
+
+.product-item {
+    flex-basis: 14%;
+    flex-grow: 0;
+}
+
+.title, .price {
+    font-size: 24px;
+    text-align: center;
+    font-family: GeosansLight;
+    text-transform: uppercase;
+}
+
+.price {
+    font-family: "Myriad Pro";
+    font-size: 18px;
+}
+
 .item,
 .sub-item {
     z-index: 10;

@@ -4,7 +4,7 @@ class SlideInnerContent extends Component {
     render() {
         return (
             <div className="sub-item">
-                <img className="img" src="1_1.png" alt="" />
+                <img className="img" src={this.props.data.photo} alt="" />
                 <div className="price">
                     <span>viscose<br/>sweater</span>
                     <b>29.90$</b>

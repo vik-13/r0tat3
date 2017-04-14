@@ -16,8 +16,7 @@ class Rotate extends Component {
                 slide.visible = (index === 0);
                 slide.x = 0;
                 slide.cssClass = (index === 0) ? '--initial' : '--inactive';
-                slide.key = index + (slide.isCopy ? '-copy-' + slide.isCopy : '');
-
+                slide.key = slide.key + '-' + index + (slide.isCopy ? '-copy-' + slide.isCopy : '');
                 return slide;
             })
         };
@@ -35,6 +34,7 @@ class Rotate extends Component {
                 return Object.assign({isCopy: i + 1, originalIndex: index}, slide);
             }));
         }
+        console.log(outSlides);
         return outSlides;
     }
 
@@ -62,11 +62,11 @@ class Rotate extends Component {
         let nextData, nextIndex,
             originalIndex = this.state.slides[this.state.current].originalIndex;
         if (this.state.selected !== -1 ||
-            (this.state.data[originalIndex].children &&
-            this.state.data[originalIndex].children.length)) {
+            (this.state.data[originalIndex].products &&
+            this.state.data[originalIndex].products.length)) {
 
             nextData = (this.state.selected === -1) ?
-                this.prepareSlides(this.state.data[originalIndex].children) : this.prepareSlides(this.state.data);
+                this.prepareSlides(this.state.data[originalIndex].products) : this.prepareSlides(this.state.data);
             nextIndex = this.state.selected !== -1 ? this.state.selected : 0;
 
             //To Initial state
@@ -98,8 +98,8 @@ class Rotate extends Component {
                         slide.visible = (index === nextIndex);
                         slide.x = 0;
                         slide.cssClass = (index === nextIndex) ? '--pre-initial' : '--inactive';
-                        slide.key = index + ((this.state.selected === -1) ? '-child' : '');
-
+                        slide.key = slide.key + '-' + index + ((this.state.selected === -1) ? '-child' : '');
+                        console.log(slide.key);
                         return slide;
                     }),
                 });
